@@ -1,5 +1,7 @@
-class AddPalNamesToPals < ActiveRecord::Migration[7.1]
-  NEW_PALS =
+# frozen_string_literal: true
+
+class UpdatePals < ActiveRecord::Migration[7.1]
+  NEW_PALS = [
     { name: 'Lamball', number:1, power: 1470 },
     { name: 'Cattiva', number: 2, power: 1460 },
     { name: 'Chikipi', number: 3, power: 1500 },
@@ -137,24 +139,16 @@ class AddPalNamesToPals < ActiveRecord::Migration[7.1]
     { name: 'Necromus', number: 135, power: 70},
     { name: 'Frostallion', number: 136, power: 120},
     { name: 'Frostallion Noct', number: 137, power: 100},
-    { name: 'Jetragon', number: 138, power: 90}.freeze # frozen_string_literal: true
+    { name: 'Jetragon', number: 138, power: 90}
+  ].freeze
 
   def up
-    pals = NEW_PALS
-    binding.pry
-    pals.each do |pal|
-      binding.pry
-      Pals.create(
-        name: pal.name,
-        number: pal.number,
-        power: pal.power
-      )
-
-      # Report progress
-      progress_bar(
-        'Creating pals',
-        total: pals.count
-      ).increment
+    NEW_PALS.each do |pal|
+      pal = Pal.create(
+        {name: pal[:name],
+        number: pal[:number],
+        power: pal[:power]
+        })
     end
   end
 
@@ -162,3 +156,4 @@ class AddPalNamesToPals < ActiveRecord::Migration[7.1]
     raise ActiveRecord::IrreversibleMigration
   end
 end
+
