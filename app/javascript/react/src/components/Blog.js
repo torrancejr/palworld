@@ -12,6 +12,7 @@ import FeaturedPost from './FeaturedPost';
 import Main from './Main';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import Hero from '../images/Palworld-4k-Hero.png'
 // import post1 from './blog-post.1.md';
 // import post2 from './blog-post.2.md';
 // import post3 from './blog-post.3.md';
@@ -27,12 +28,11 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-    title: 'Title of a longer featured blog post',
-    description:
-        "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'https://source.unsplash.com/random?wallpapers',
-    imageText: 'main image description',
-    linkText: 'Continue reading…',
+    title: '',
+    description:'',
+    image: `${Hero}`,
+    imageText: '',
+    linkText: '',
 };
 
 const featuredPosts = [

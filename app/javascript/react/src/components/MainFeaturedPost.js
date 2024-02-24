@@ -5,6 +5,9 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import { sizing } from '@mui/system';
+
+
 
 function MainFeaturedPost(props) {
     const { post } = props;
@@ -41,6 +44,7 @@ function MainFeaturedPost(props) {
                             position: 'relative',
                             p: { xs: 3, md: 6 },
                             pr: { md: 0 },
+                            minHeight: { xs: 250, md: 720 },
                         }}
                     >
                         <Typography component="h1" variant="h3" color="inherit" gutterBottom>
