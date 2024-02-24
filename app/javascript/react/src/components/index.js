@@ -1,7 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import ThemeProvider from "./Blog";
-import * as ReactDOM from "react-dom";
+import {
+    createBrowserRouter,
+    RouterProvider,
+    Route,
+    Link,
+} from "react-router-dom";
 
 // document.addEventListener("turbo:load", () => {
 //     const root = createRoot(
@@ -9,7 +13,6 @@ import * as ReactDOM from "react-dom";
 //     );
 //     root.render(<Hello />);
 // });
-
-document.addEventListener('DOMContentLoaded', () => {
-    ReactDOM.render(<ThemeProvider/>, document.getElementById('home'))
-})
+createRoot(document.getElementById("home")).render(
+    <RouterProvider router={router} />
+);

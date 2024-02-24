@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  #
+  # get 'post', action: :home, controller: 'home'
+  get '*path', action: :home, controller: 'home'
   resources :pals
 end

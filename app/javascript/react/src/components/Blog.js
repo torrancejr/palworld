@@ -17,16 +17,13 @@ import Footer from './Footer';
 // import post3 from './blog-post.3.md';
 
 const sections = [
-    { title: 'Technology', url: '#' },
-    { title: 'Design', url: '#' },
-    { title: 'Culture', url: '#' },
-    { title: 'Business', url: '#' },
-    { title: 'Politics', url: '#' },
-    { title: 'Opinion', url: '#' },
-    { title: 'Science', url: '#' },
-    { title: 'Health', url: '#' },
-    { title: 'Style', url: '#' },
-    { title: 'Travel', url: '#' },
+    { title: 'Paldeck', url: '#' },
+    { title: 'Map', url: '#' },
+    { title: 'Alpha Pals', url: '#' },
+    { title: 'Breeding', url: '#' },
+    { title: 'Recipes', url: '#' },
+    { title: 'Leveling', url: '#' },
+    { title: 'PVP', url: '#' },
 ];
 
 const mainFeaturedPost = {
@@ -86,12 +83,12 @@ const sidebar = {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function Blog() {
+export default function Blog () {
     return (
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
             <Container maxWidth="lg">
-                <Header title="Blog" sections={sections} />
+                <Header title="PVPALWORLD" sections={sections} />
                 <main>
                     <MainFeaturedPost post={mainFeaturedPost} />
                     <Grid container spacing={4}>
